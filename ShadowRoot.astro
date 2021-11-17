@@ -1,0 +1,11 @@
+---
+const {
+	closed,
+	...props
+} = Astro.props
+
+props.shadowRoot = closed ? 'closed' : 'open'
+---
+<template {...props}>
+	<slot />
+</template>

@@ -1,0 +1,9 @@
+---
+const {
+	'as': tag = null,
+	...props
+} = Astro.props
+
+const As: string = tag === null ? 'span' : tag
+---
+<As {...props}><slot /></As>

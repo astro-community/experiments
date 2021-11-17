@@ -1,0 +1,38 @@
+{
+  "name": "@astropub/experiments",
+  "description": "A collection of experimental Astro components and tooling.",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./As": "./As.astro",
+    "./AsProxy": "./AsProxy.ts",
+    "./ShadowRoot": "./ShadowRoot.astro"
+  },
+  "files": [
+    "Poly.astro",
+    "PolyProxy.ts",
+    "ShadowRoot.astro",
+    "internal"
+  ],
+  "keywords": [
+    "astro-component"
+  ],
+  "license": "CC0-1.0",
+  "repository": "astro-community/experiments",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "bugs": "https://github.com/astro-community/experiments/issues",
+  "homepage": "https://github.com/astro-community/experiments#readme",
+  "devDependencies": {
+    "@skypack/package-check": "0.2.2"
+  },
+  "scripts": {
+    "release:test": "npm pack",
+    "prerelease:test": "git rm LICENSE.md",
+    "postrelease:test": "git checkout HEAD LICENSE.md",
+    "release": "npm publish --access public",
+    "prerelease": "git rm LICENSE.md",
+    "postrelease": "git checkout HEAD LICENSE.md",
+    "test": "package-check"
+  }
+}
