@@ -5,8 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./index.ts",
-    "./As": "./As.astro",
-    "./AsProxy": "./AsProxy.ts",
+    "./Poly": "./Poly.astro",
+    "./PolyProxy": "./PolyProxy.ts",
     "./ShadowRoot": "./ShadowRoot.astro"
   },
   "files": [

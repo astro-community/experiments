@@ -6,9 +6,15 @@ A collection of experimental Astro components and tooling.
 
 ```astro
 ---
-import { As } from '@astropub/experiments'
-import { AsProxy } from '@astropub/experiments'
-import { ShadowRoot } from '@astropub/experiments'
+import Poly from '@astropub/experiments/Poly'
+import PolyProxy from '@astropub/experiments/PolyProxy'
+import ShadowRoot from '@astropub/experiments/ShadowRoot'
+---
+```
+
+```astro
+---
+import { Poly, PolyProxy, ShadowRoot } from '@astropub/experiments'
 ---
 ```
 
@@ -30,7 +36,7 @@ The `Poly` component generates any type of element from an `as` attribute.
 
 ```astro
 ---
-import { Poly } from '@astropub/experiments'
+import Poly from '@astropub/experiments/Poly'
 ---
 <Poly as="h1">
   <!-- renders within `<h1>` -->
@@ -39,7 +45,7 @@ import { Poly } from '@astropub/experiments'
 
 ```astro
 ---
-import { Poly } from '@astropub/experiments'
+import Poly from '@astropub/experiments/Poly'
 ---
 <Poly as="custom-element">
   <!-- renders within `<custom-element>` -->
@@ -58,7 +64,7 @@ The `PolyProxy` component generates any type of element using dot syntax.
 
 ```astro
 ---
-import { PolyProxy } from '@astropub/experiments'
+import PolyProxy from '@astropub/experiments/PolyProxy'
 ---
 <PolyProxy.h1>
   <!-- renders within `<h1>` -->
@@ -67,7 +73,7 @@ import { PolyProxy } from '@astropub/experiments'
 
 ```astro
 ---
-import { PolyProxy } from '@astropub/experiments'
+import PolyProxy from '@astropub/experiments/PolyProxy'
 ---
 <PolyProxy.CustomElement>
   <!-- renders within `<custom-element>` -->
@@ -84,7 +90,7 @@ The `ShadowRoot` component generates a `<template shadowroot="open">` wrapper.
 
 ```astro
 ---
-import { ShadowRoot } from '@astropub/experiments'
+import ShadowRoot from '@astropub/experiments/ShadowRoot'
 ---
 <custom-tabs>
   <ShadowRoot>
@@ -96,7 +102,7 @@ import { ShadowRoot } from '@astropub/experiments'
 
 ```astro
 ---
-import { ShadowRoot } from '@astropub/experiments'
+import ShadowRoot from '@astropub/experiments/ShadowRoot'
 ---
 <custom-tabs>
   <ShadowRoot closed>
