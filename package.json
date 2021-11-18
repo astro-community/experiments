@@ -8,12 +8,13 @@
     "./Poly": "./Poly.astro",
     "./PolyProxy": "./PolyProxy.ts",
     "./ShadowRoot": "./ShadowRoot.astro",
-    "./toAstroWebComponent": "./toAstroWebComponent.ts"
+    "./toAstroWebComponent": "./toAstroWebComponent.js"
   },
   "files": [
     "Poly.astro",
     "PolyProxy.ts",
     "ShadowRoot.astro",
+    "toAstroWebComponent.js",
     "toAstroWebComponent.ts",
     "internal"
   ],
