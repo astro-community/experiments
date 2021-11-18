@@ -24,7 +24,11 @@
   "bugs": "https://github.com/astro-community/experiments/issues",
   "homepage": "https://github.com/astro-community/experiments#readme",
   "devDependencies": {
-    "@skypack/package-check": "0.2.2"
+    "@skypack/package-check": "0.2.2",
+    "astro": "^0.21.0-next.7"
+  },
+  "peerDependencies": {
+    "astro": "*"
   },
   "scripts": {
     "release:test": "npm pack",
