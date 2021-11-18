@@ -21,6 +21,7 @@ import { Poly, PolyProxy, ShadowRoot } from '@astropub/experiments'
 - **[Poly](#Poly)**
 - **[PolyProxy](#PolyProxy)**
 - **[ShadowRoot](#ShadowRoot)**
+- **[toAstroWebComponent](#toAstroWebComponent)**
 
 ---
 
@@ -110,4 +111,38 @@ import ShadowRoot from '@astropub/experiments/ShadowRoot'
     <!-- anything here renders within a closed shadow dom -->
   </ShadowRoot>
 </custom-tabs>
+```
+
+<br />
+
+### toAstroWebComponent
+
+The `toAstroWebComponent` component generates an Astro wrapper for a genuine Web Component.
+
+#### toAstroWebComponent Usage
+
+```astro
+---
+import toAstroWebComponent from '@astropub/experiments/toAstroWebComponent'
+
+const Heading = toAstroWebComponent(
+  import.meta.glob('../components/HTMLHeadingElement.js'), import.meta.url
+)
+---
+<Heading>
+  <!-- renders within `<html-heading>` -->
+  <!-- or whatever name the component is given from `customElements.define` -->
+</Heading>
+```
+
+```js
+// ../components/HTMLHeadingElement.js
+export default class HTMLHeadingElement extends HTMLElement {
+  connectedCallback() {
+    const shadowRoot = this.shadowRoot || this.attachShadow({ mode: 'open' })
+    const h1 = shadowRoot.firstChild || shadowRoot.appendChild(document.createElement('h1'))
+
+    h1.firstChild || h1.appendChild(document.createElement('slot'))
+  }
+}
 ```

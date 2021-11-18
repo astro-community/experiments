@@ -7,12 +7,14 @@
     ".": "./index.ts",
     "./Poly": "./Poly.astro",
     "./PolyProxy": "./PolyProxy.ts",
-    "./ShadowRoot": "./ShadowRoot.astro"
+    "./ShadowRoot": "./ShadowRoot.astro",
+    "./toAstroWebComponent": "./toAstroWebComponent.ts"
   },
   "files": [
     "Poly.astro",
     "PolyProxy.ts",
     "ShadowRoot.astro",
+    "toAstroWebComponent.ts",
     "internal"
   ],
   "keywords": [
