@@ -430,7 +430,9 @@ export const ResizeObserver = REGISTER(globalThis.ResizeObserver || class Resize
 // shim globalThis as an instance of Window
 
 if (!(globalThis instanceof Window)) {
-	Object.setPrototypeOf(globalThis, Window.prototype)
+	try {
+		Object.setPrototypeOf(globalThis, Window.prototype)
+	} catch (error) {}
 
 	Object.assign(INTERNALS_FOR(globalThis), {
 		customElements: globalThis.customElements || new CustomElementRegistry(),
